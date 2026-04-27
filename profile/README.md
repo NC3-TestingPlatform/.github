@@ -4,7 +4,7 @@
 
 # NC3 Testing Platform
 
-**Modular security analysis toolkit for domains and mail infrastructure 🇱🇺**
+**External attack surface assessment — recon, misconfiguration detection, no exploitation 🇱🇺**
 
 [![Website](https://img.shields.io/badge/testing.nc3.lu-0066CC?style=for-the-badge&logo=firefox-browser&logoColor=white)](https://testing.nc3.lu/)
 [![Email](https://img.shields.io/badge/opensource%40nc3.lu-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:opensource@nc3.lu)
@@ -18,6 +18,8 @@
 
 The **NC3 Testing Platform** is an open-source security toolkit developed by [NC3.lu](https://nc3.lu/) — Luxembourg's National Cybersecurity Competence Center — operating under the [Luxembourg House of Cybersecurity](https://lhc.lu).
 
+It automates **external attack surface assessments** from an unauthenticated, black-box perspective — covering passive reconnaissance, active service probing, and misconfiguration detection across DNS, PKI, mail security controls, and HTTP/S-exposed services. The platform operates strictly within a pre-exploitation scope: no vulnerability exploitation, no lateral movement, no payload delivery.
+
 This organisation hosts the **v4** rewrite: a ground-up redesign built around independent, API-driven backend modules that can be composed and orchestrated by a central platform core.
 
 > **v3** is live at [testing.nc3.lu](https://testing.nc3.lu/) · source at [NC3-LU/TestingPlatform](https://github.com/NC3-LU/TestingPlatform)
@@ -26,13 +28,13 @@ This organisation hosts the **v4** rewrite: a ground-up redesign built around in
 
 ## Architecture
 
-v4 is a full-stack application structured around autonomous backend modules. Each module lives in its own repository, exposes a consistent REST API, and can be deployed and tested independently.
+v4 is a full-stack application structured around autonomous backend modules. Each module targets a distinct attack surface area, lives in its own repository, exposes a consistent REST API, and can be deployed and tested independently.
 
 | Layer | Description |
 |---|---|
-| **Modules** | Independent analysis services, one per security check domain |
-| **API Gateway** | Central orchestration and routing layer *(planned)* |
-| **Frontend** | User-facing interface consuming the gateway *(planned)* |
+| **Modules** | Standalone assessment engines, scoped to a specific attack surface domain |
+| **API Gateway** | Orchestration and aggregation layer *(planned)* |
+| **Frontend** | Analyst-facing interface for result review and reporting *(planned)* |
 
 ---
 
@@ -40,11 +42,11 @@ v4 is a full-stack application structured around autonomous backend modules. Eac
 
 | Module | Description |
 |--------|-------------|
-| [**subdomainenum**](https://github.com/NC3-TestingPlatform/subdomainenum) | Passive & active subdomain discovery |
-| [**mailvalidator**](https://github.com/NC3-TestingPlatform/mailvalidator) | SPF, DKIM, DMARC and mail exchange validation |
-| [**headersvalidator**](https://github.com/NC3-TestingPlatform/headersvalidator) | HTTP security header analysis |
-| [**chainvalidator**](https://github.com/NC3-TestingPlatform/chainvalidator) | TLS/SSL certificate chain & DNSSEC validation |
-| [**zoneripper**](https://github.com/NC3-TestingPlatform/zoneripper) | DNSSEC zone walking vulnerability testing |
+| [**subdomainenum**](https://github.com/NC3-TestingPlatform/subdomainenum) | Passive & active subdomain enumeration and attack surface mapping |
+| [**mailvalidator**](https://github.com/NC3-TestingPlatform/mailvalidator) | SPF, DKIM, and DMARC policy validation and mail exchange assessment |
+| [**headersvalidator**](https://github.com/NC3-TestingPlatform/headersvalidator) | HTTP security header audit against hardening baselines |
+| [**chainvalidator**](https://github.com/NC3-TestingPlatform/chainvalidator) | TLS/SSL certificate chain integrity and DNSSEC validation |
+| [**zoneripper**](https://github.com/NC3-TestingPlatform/zoneripper) | DNSSEC zone enumeration and zone-walking exposure testing |
 
 A full-stack repository (frontend, API gateway, orchestration layer) will follow once the module layer is stable.
 
