@@ -42,11 +42,11 @@ v4 is a full-stack application structured around autonomous backend modules. Eac
 
 | Module | Description |
 |--------|-------------|
-| [**subdomainenum**](https://github.com/NC3-TestingPlatform/subdomainenum) | Passive & active subdomain enumeration and attack surface mapping |
-| [**mailvalidator**](https://github.com/NC3-TestingPlatform/mailvalidator) | SPF, DKIM, and DMARC policy validation and mail exchange assessment |
-| [**headersvalidator**](https://github.com/NC3-TestingPlatform/headersvalidator) | HTTP security header audit against hardening baselines |
-| [**chainvalidator**](https://github.com/NC3-TestingPlatform/chainvalidator) | TLS/SSL certificate chain integrity and DNSSEC validation |
-| [**zoneripper**](https://github.com/NC3-TestingPlatform/zoneripper) | DNSSEC zone enumeration and zone-walking exposure testing |
+| [**chainvalidator**](https://github.com/NC3-TestingPlatform/chainvalidator) | DNSSEC chain-of-trust validator — verifies DS, DNSKEY, and RRSIG records from the IANA root trust anchor to the target domain |
+| [**mailvalidator**](https://github.com/NC3-TestingPlatform/mailvalidator) | Mail security posture validator — checks MX, SPF, DMARC, DKIM, BIMI, MTA-STS, DNSSEC, and 104 DNSBLs with letter-grade verdicts |
+| [**subdomainenum**](https://github.com/NC3-TestingPlatform/subdomainenum) | Subdomain enumeration CLI — passive and active discovery wrapping subfinder, amass, findomain, assetfinder, gobuster, ffuf, and dnsrecon |
+| [**headersvalidator**](https://github.com/NC3-TestingPlatform/headersvalidator) | HTTP security-header validator — checks headers against RFC 9110/9111, OWASP guidelines, and the IANA registry with letter-grade verdicts |
+| [**zoneripper**](https://github.com/NC3-TestingPlatform/zoneripper) | DNSSEC zone-walking tester — walks NSEC chains, collects NSEC3 hashes, and exports cracking jobs for Hashcat |
 
 A full-stack repository (frontend, API gateway, orchestration layer) will follow once the module layer is stable.
 
