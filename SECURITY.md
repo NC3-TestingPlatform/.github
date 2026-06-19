@@ -48,7 +48,7 @@ We will keep you informed of our progress throughout the process. If we are unab
 
 ## Severity Classification
 
-We follow the [CVSS v3.1](https://www.first.org/cvss/) scoring system for severity classification:
+We follow the [CVSS v4.0](https://www.first.org/cvss/) scoring system for severity classification:
 
 | Severity | CVSS Score |
 | -------- | ---------- |
