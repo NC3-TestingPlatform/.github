@@ -48,6 +48,7 @@ v4 is a full-stack application structured around autonomous backend modules. Eac
 | [**headersvalidator**](https://github.com/NC3-TestingPlatform/headersvalidator) | `assessment` | HTTP security-header validator — checks headers against RFC 9110/9111, OWASP guidelines, and the IANA registry with letter-grade verdicts |
 | [**quantumvalidator**](https://github.com/NC3-TestingPlatform/quantumvalidator) | `assessment` | Post-quantum cryptography readiness validator — probes TLS and SMTP/STARTTLS endpoints for ML-KEM hybrid key exchange (CNSA 2.0 / BSI TR-02102-2) with a binary SAFE/UNSAFE verdict |
 | [**zoneripper**](https://github.com/NC3-TestingPlatform/zoneripper) | `assessment` | DNSSEC zone-walking tester — walks NSEC chains, collects NSEC3 hashes, and exports cracking jobs for Hashcat |
+| [**portscanner**](https://github.com/NC3-TestingPlatform/portscanner) | `assessment` | nmap-driven port and service inventory — reports open ports and detected services for any host, IP, or CIDR range, with nmap XML parsed via nmap2json (inventory only, no grading) |
 
 A full-stack repository (frontend, API gateway, orchestration layer) will follow once the module layer is stable.
 
