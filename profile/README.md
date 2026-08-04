@@ -30,11 +30,11 @@ This organisation hosts the **v4** rewrite: a ground-up redesign built around in
 
 v4 is a full-stack application structured around autonomous backend modules. Each module targets a distinct attack surface area, lives in its own repository, exposes a consistent REST API, and can be deployed and tested independently.
 
-| Layer | Description |
-|---|---|
-| **Modules** | Standalone assessment engines, scoped to a specific attack surface domain |
-| **API Gateway** | Orchestration and aggregation layer *(planned)* |
-| **Frontend** | Analyst-facing interface for result review and reporting *(planned)* |
+| Layer | Repository | Description |
+|---|---|---|
+| **Modules** | see [Modules](#modules) below | Standalone assessment engines, scoped to a specific attack surface domain |
+| **Backend** | [testing-platform-backend](https://github.com/NC3-TestingPlatform/testing-platform-backend) | Platform core — orchestration, aggregation, and REST API layer *(in development, private)* |
+| **Frontend** | [testing-platform-frontend](https://github.com/NC3-TestingPlatform/testing-platform-frontend) | Analyst-facing web interface for result review and reporting *(in development, private)* |
 
 ---
 
@@ -50,8 +50,9 @@ v4 is a full-stack application structured around autonomous backend modules. Eac
 | [**quantumvalidator**](https://github.com/NC3-TestingPlatform/quantumvalidator) | `assessment` | Post-quantum cryptography readiness validator — probes TLS and SMTP/STARTTLS endpoints for ML-KEM hybrid key exchange (CNSA 2.0 / BSI TR-02102-2) with a binary SAFE/UNSAFE verdict |
 | [**zoneripper**](https://github.com/NC3-TestingPlatform/zoneripper) | `assessment` | DNSSEC zone-walking tester — walks NSEC chains, collects NSEC3 hashes, and exports cracking jobs for Hashcat |
 | [**portscanner**](https://github.com/NC3-TestingPlatform/portscanner) | `assessment` | nmap-driven port and service inventory — reports open ports and detected services for any host, IP, or CIDR range, with nmap XML parsed via nmap2json (inventory only, no grading) |
+| [**fileanalyzer**](https://github.com/NC3-TestingPlatform/fileanalyzer) | `assessment` | File analysis engine — CIRCL hashlookup known-file triage with policy-based verdicts, escalating unknown or suspicious files to Pandora deep behavioural analysis |
 
-A full-stack repository (frontend, API gateway, orchestration layer) will follow once the module layer is stable.
+The platform core — [testing-platform-backend](https://github.com/NC3-TestingPlatform/testing-platform-backend) and [testing-platform-frontend](https://github.com/NC3-TestingPlatform/testing-platform-frontend) — is under active development in private repositories.
 
 ---
 
