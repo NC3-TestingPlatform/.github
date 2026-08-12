@@ -77,7 +77,7 @@ For general inquiries or collaboration proposals, reach out at [opensource@nc3.l
 
 ## License
 
-Every repository in this organisation — the assessment modules, the backend, and the frontend — is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). Free to use, study, modify, and redistribute under the same terms.
+Every code repository in this organisation — the assessment modules, the backend, and the frontend — is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). Free to use, study, modify, and redistribute under the same terms.
 
 [![License](https://img.shields.io/badge/license-GPLv3-lightgrey?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
