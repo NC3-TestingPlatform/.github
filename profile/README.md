@@ -33,8 +33,8 @@ v4 is a full-stack application structured around autonomous backend modules. Eac
 | Layer | Repository | Description |
 |---|---|---|
 | **Modules** | see [Modules](#modules) below | Standalone assessment engines, scoped to a specific attack surface domain |
-| **Backend** | [testing-platform-backend](https://github.com/NC3-TestingPlatform/testing-platform-backend) | Platform core — orchestration, aggregation, and REST API layer *(in development, private)* |
-| **Frontend** | [testing-platform-frontend](https://github.com/NC3-TestingPlatform/testing-platform-frontend) | Analyst-facing web interface for result review and reporting *(in development, private)* |
+| **Backend** | [testing-platform-backend](https://github.com/NC3-TestingPlatform/testing-platform-backend) | Platform core — FastAPI orchestration, aggregation, and REST API layer *(in development)* |
+| **Frontend** | [testing-platform-frontend](https://github.com/NC3-TestingPlatform/testing-platform-frontend) | Analyst-facing web interface for result review and reporting *(in development)* |
 
 ---
 
@@ -52,7 +52,7 @@ v4 is a full-stack application structured around autonomous backend modules. Eac
 | [**portscanner**](https://github.com/NC3-TestingPlatform/portscanner) | `assessment` | nmap-driven port and service inventory — reports open ports and detected services for any host, IP, or CIDR range, with nmap XML parsed via nmap2json (inventory only, no grading) |
 | [**fileanalyzer**](https://github.com/NC3-TestingPlatform/fileanalyzer) | `assessment` | File analysis engine — CIRCL hashlookup known-file triage with policy-based verdicts, escalating unknown or suspicious files to Pandora deep behavioural analysis |
 
-The platform core — [testing-platform-backend](https://github.com/NC3-TestingPlatform/testing-platform-backend) and [testing-platform-frontend](https://github.com/NC3-TestingPlatform/testing-platform-frontend) — is under active development in private repositories.
+The platform core — [testing-platform-backend](https://github.com/NC3-TestingPlatform/testing-platform-backend) and [testing-platform-frontend](https://github.com/NC3-TestingPlatform/testing-platform-frontend) — is under active development, and both repositories are public and open to contributions.
 
 ---
 
@@ -72,6 +72,14 @@ NC3 collaborates closely with the national and international cybersecurity commu
 All modules are open source and **contributions are welcome**. Whether you're reporting a bug, suggesting a feature, or submitting a pull request — check the `CONTRIBUTING.md` in each repository to get started.
 
 For general inquiries or collaboration proposals, reach out at [opensource@nc3.lu](mailto:opensource@nc3.lu).
+
+---
+
+## License
+
+Every code repository in this organisation — the assessment modules, the backend, and the frontend — is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). Free to use, study, modify, and redistribute under the same terms.
+
+[![License](https://img.shields.io/badge/license-GPLv3-lightgrey?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ---
 
